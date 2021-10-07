@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-center {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-company {
+  position: absolute;
+  top: 63%;
+  left: 10%;
+  display: flex;
+  /* align-items: center; */
+  text-align: left;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  color: rgba(243, 242, 242, 0.637);
+  max-width: 350px;
+  animation: 10s opacityAppear;
+}
+
+.about-company,
+.company-message {
+  display: block;
+}
+
+.company-message {
+  color: white;
+  margin-top: 0.5rem;
+  width: 1000px;
+}
+
+.span-dot {
+  color: red;
+}
+
+@media screen and (max-width: 679px) {
+  .about-company {
+    margin-top: 3rem;
+  }
+
+  .company-message {
+    width: 350px;
+  }
+  .hero-title h1 {
+    font-size: 3.2rem;
+  }
+  
+}
+
+.image {
+  min-height: 100vh;
+  position: relative;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+    url(./images/hero.jfif) center/cover no-repeat;
+  animation: inandout 5s;
+}
+
+/* animation */
+
+@keyframes inandout {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lefttoright {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes opacityAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+} */
+
+.hero-title {
+  position: absolute;
+  top: 35%;
+  left: 10%;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  color: #fff;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  font-family: sans-serif;
+  animation: 10s lefttoright;
+}
+
+.btn {
+  position: absolute;
+  left: 115px;
+  top: 73%;
+  border: none;
+  margin-top: 0.5rem;
+  width: 5rem;
+  height: 2.2rem;
+  border-radius: 40px;
+  background: blue;
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: rgb(142, 217, 241);
+  color: black;
+  font-weight: bold;
+}
+
+input {
+  width: 8rem;
+  height: 35px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 0.85rem;
+  text-align: center;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
